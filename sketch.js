@@ -88,13 +88,13 @@ function setup()
 
    //btn 2
    button2 = createImg('cut_btn.png');
-   button2.position(330,35);
+   button2.position(canW/2,35);
    button2.size(60,60);
    button2.mouseClicked(drop2);
  
    //btn3
    button3 = createImg('cut_btn.png');
-   button3.position(360,200);
+   button3.position(canW,200);
    button3.size(60,60);
    button3.mouseClicked(drop3);
 
@@ -103,15 +103,15 @@ function setup()
   mute_btn.size(50,50);
   mute_btn.mouseClicked(mute);
   
-  rope = new Rope(8,{x:40,y:30});
-  rope2 = new Rope(7,{x:370,y:40});
-  rope3 = new Rope(4,{x:400,y:225});
+  rope = new Rope(8,{x:20,y:30});
+  rope2 = new Rope(7,{x:canW/2,y:40});
+  rope3 = new Rope(4,{x:canW,y:225});
 
-  ground = new Ground(200,canH,600,20);
+  ground = new Ground(canW,canH,600,20);
   blink.frameDelay = 20;
   eat.frameDelay = 20;
 
-  bunny = createSprite(170,canH-80,100,100);
+  bunny = createSprite(canW/2,canH-80,100,100);
   bunny.scale = 0.2;
 
   bunny.addAnimation('blinking',blink);
